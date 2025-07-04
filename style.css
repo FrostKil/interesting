@@ -1,0 +1,104 @@
+
+.billboard-container {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    margin: 100px auto;
+    margin-top: 20px;
+    overflow: hidden;
+    background: #111;
+    border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    position: relative;
+}
+.billboard-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    padding-left: 100%;
+    animation: billboard-scroll 10s linear infinite;
+}
+@keyframes billboard-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+.image-orbit {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0px auto;
+
+    
+  
+}
+
+.orbit-img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 36px;
+    object-fit: cover;
+    animation: orbit-move 12s linear infinite;
+    animation-delay: calc(var(--i) * 1.5s);
+    opacity: 0;
+    animation-fill-mode: both;
+    animation-name: orbit-move, orbit-fadein;
+    animation-duration: 12s, 0.01s;
+    animation-delay: calc(var(--i) * 1.5s), calc(var(--i) * 1.5s);
+    animation-iteration-count: infinite, 1;
+}
+
+@keyframes orbit-move {
+    0%   { top: 320px; left: 0px; }
+    12.5% { top: 0px; left: 0px; }
+    25%  { top: 0px; left: 320px; }
+    37.5% { top: 0px; left: 640px; }
+    50%  { top: 320px; left: 640px; }
+    62.5% { top: 640px; left: 640px; }
+    75%  { top: 640px; left: 320px; }
+    87.5% { top: 640px; left: 0px; }
+    100% { top: 320px; left: 0px; }
+}
+
+@keyframes orbit-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.center-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    background: rgba(20, 20, 20, 0.85);
+    padding: 32px 40px;
+    border-radius: 32px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    pointer-events: auto;
+    width: max-content;
+    opacity: 0;
+    animation: center-links-fadein 2.5s ease forwards;
+    animation-delay: 7.5s;
+}
+
+@keyframes center-links-fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.center-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.center-links a:hover {
+    color: #ffd700;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الراسبين العالمي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="welcome-audio" src="موال سوريا الأسد.mp3"></audio>
+    <div id="audio-permission" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:9999;">
+        <button onclick="playAudio()" style="font-size:1.5rem;padding:1em 2em;">اضغط علي</button>
+    </div>
+    <div class="billboard-container">
+        <div class="billboard-text" id="billboard-text">
+            مرحبًا بكم في موقع الراسبين العالمي
+        </div>
+    </div>
+    
+    <script>
+        function playAudio() {
+            document.getElementById('welcome-audio').play();
+            document.getElementById('audio-permission').style.display = 'none';
+        }
+    </script>
+    <div class="image-orbit">
+<div class="center-links">
+    <a href="uno.html" target="_blank">تعلم عن الرسوب</a>
+    <a href="dos.html" target="_blank">كيف تصير راسب</a>
+    <a href="tres.html" target="_blank">تواصل معنا</a>
+</div>
+<img src="PairDrop_files_20250704_1405/2.webp" class="orbit-img" style="--i:0;">
+<img src="PairDrop_files_20250704_1405/3.webp" class="orbit-img" style="--i:1;">
+<img src="PairDrop_files_20250704_1405/4.webp" class="orbit-img" style="--i:2;">
+<img src="PairDrop_files_20250704_1405/6.webp" class="orbit-img" style="--i:3;">
+<img src="PairDrop_files_20250704_1405/8.webp" class="orbit-img" style="--i:4;">
+<img src="PairDrop_files_20250704_1405/9.webp" class="orbit-img" style="--i:5;">
+<img src="PairDrop_files_20250704_1405/10.webp" class="orbit-img" style="--i:6;">
+<img src="PairDrop_files_20250704_1405/7.webp" class="orbit-img" style="--i:7;">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
